@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.animation.FadeTransition;
 import javafx.util.Duration;
 
-public class HelloController {
+public class Controller {
     public Button button1;
     @FXML
     private Label welcomeText;
