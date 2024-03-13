@@ -12,7 +12,12 @@ public class Controller {
 
     @FXML
     private void SettingIA() {
+        System.out.println("SettingIA");
+    }
 
+    @FXML
+    private void ModelsIA() {
+        System.out.println("ModelIA");
     }
 
 }

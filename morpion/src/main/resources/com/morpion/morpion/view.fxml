@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Controller">
    <children>
-      <MenuBar prefHeight="20.0" prefWidth="100000.0" >
-        <menus >
+      <MenuBar prefHeight="25.0" prefWidth="910.0">
+        <menus>
           <Menu mnemonicParsing="false" text="IA">
             <items>
-              <MenuItem fx:id="#MenuSettingIA" onAction="#SettingIA" mnemonicParsing="false" text="Setting" />
-                  <MenuItem mnemonicParsing="false" text="Model" />
+              <MenuItem mnemonicParsing="false" onAction="#SettingIA" text="Setting" />
+                  <MenuItem mnemonicParsing="false" onAction="#ModelsIA" text="Models" />
             </items>
           </Menu>
         </menus>
