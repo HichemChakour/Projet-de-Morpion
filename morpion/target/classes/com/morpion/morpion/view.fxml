@@ -3,10 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Controller">
-   <children>
-      <MenuBar prefHeight="25.0" prefWidth="910.0">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Controller">
+    <top>
+      <MenuBar prefHeight="25.0" prefWidth="Infinity">
         <menus>
           <Menu mnemonicParsing="false" text="IA">
             <items>
@@ -16,5 +15,5 @@
           </Menu>
         </menus>
       </MenuBar>
-   </children>
-</AnchorPane>
+   </top>
+</BorderPane>
