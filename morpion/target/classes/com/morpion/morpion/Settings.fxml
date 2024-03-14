@@ -3,11 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="249.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Settings">
+<AnchorPane prefHeight="240.0" prefWidth="268.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Settings">
    <children>
-      <VBox layoutX="19.0" layoutY="80.0" prefHeight="128.0" prefWidth="191.0">
+      <VBox layoutX="39.0" layoutY="33.0" prefHeight="130.0" prefWidth="191.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="20.0" text="F" />
                   <TextField prefHeight="25.0" prefWidth="40.0" />
@@ -15,7 +15,7 @@
                    <TextField prefHeight="25.0" prefWidth="60.0" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="469.0">
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="469.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="20.0" text="M" />
                    <TextField prefHeight="25.0" prefWidth="40.0" />
@@ -23,7 +23,7 @@
                    <TextField prefHeight="25.0" prefWidth="60.0" />
                </children>
             </HBox>
-            <HBox prefHeight="81.0" prefWidth="513.0">
+            <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="191.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="20.0" text="D" />
                    <TextField prefHeight="25.0" prefWidth="40.0" />
@@ -33,5 +33,6 @@
             </HBox>
          </children>
       </VBox>
+      <Button layoutX="187.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Save" onAction="#sauvegarder"/>
    </children>
 </AnchorPane>
