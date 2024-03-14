@@ -16,4 +16,7 @@
         </menus>
       </MenuBar>
    </top>
+   <center>
+       <Pane fx:id="CenterPane" />
+   </center>
 </BorderPane>
