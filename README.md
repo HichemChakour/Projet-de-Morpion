@@ -1,4 +1,3 @@
-# ProjInterface
-Projet d'interface Graphique
+# Projet d'interface Graphique
 Santiago Kevin
 Chakour Hichem
