@@ -10,29 +10,29 @@
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="20.0" text="F" />
-                  <TextField prefHeight="25.0" prefWidth="40.0" />
-                   <TextField prefHeight="25.0" prefWidth="60.0" />
-                   <TextField prefHeight="25.0" prefWidth="60.0" />
+                  <TextField fx:id="F1" prefHeight="25.0" prefWidth="40.0" />
+                   <TextField fx:id="F2" prefHeight="25.0" prefWidth="60.0" />
+                   <TextField fx:id="F3" prefHeight="25.0" prefWidth="60.0" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="469.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="20.0" text="M" />
-                   <TextField prefHeight="25.0" prefWidth="40.0" />
-                   <TextField prefHeight="25.0" prefWidth="60.0" />
-                   <TextField prefHeight="25.0" prefWidth="60.0" />
+                   <TextField fx:id="M1" prefHeight="25.0" prefWidth="40.0" />
+                   <TextField fx:id="M2" prefHeight="25.0" prefWidth="60.0" />
+                   <TextField fx:id="M3" prefHeight="25.0" prefWidth="60.0" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="191.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="20.0" text="D" />
-                   <TextField prefHeight="25.0" prefWidth="40.0" />
-                   <TextField prefHeight="25.0" prefWidth="60.0" />
-                   <TextField prefHeight="25.0" prefWidth="60.0" />
+                   <TextField fx:id="D1" prefHeight="25.0" prefWidth="40.0" />
+                   <TextField fx:id="D2" prefHeight="25.0" prefWidth="60.0" />
+                   <TextField fx:id="D3" prefHeight="25.0" prefWidth="60.0" />
                </children>
             </HBox>
          </children>
       </VBox>
-      <Button layoutX="187.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Save" onAction="#sauvegarder"/>
+      <Button layoutX="187.0" layoutY="190.0" mnemonicParsing="false" onAction="#sauvegarder" prefHeight="25.0" prefWidth="60.0" text="Save" />
    </children>
 </AnchorPane>
