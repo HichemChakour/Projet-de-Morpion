@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Learn">
+   <children>
+      <TextField layoutX="220.0" layoutY="97.0" />
+      <ProgressBar layoutX="195.0" layoutY="169.0" prefWidth="200.0" progress="0.0" />
+      <Button layoutX="274.0" layoutY="240.0" mnemonicParsing="false" text="Learn" onAction="#learn"/>
+   </children>
+</AnchorPane>
