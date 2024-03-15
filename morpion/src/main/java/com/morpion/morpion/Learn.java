@@ -1,24 +1,52 @@
 package com.morpion.morpion;
 
+import java.io.IOException;
+import java.util.HashMap;
+
+import com.morpion.morpion.ai.Coup;
+import com.morpion.morpion.ai.MultiLayerPerceptron;
+import com.morpion.morpion.ai.SigmoidalTransferFunction;
+import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
-
-import java.util.HashMap;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class Learn {
 
 
-
-
-    int size = 9 ;
-    int l = 2 ;
-    int h = 128 ;
-    double epochs = 1000 ;
-    double lr = 0.1 ;
-    boolean verbose = true ;
-    HashMap<Integer, Coup> mapTrain = new HashMap<Integer, Coup>() ;
     @FXML
-    private MultiLayerPerceptron learn() {
+    private TextField progresstext;
+    @FXML
+    private ProgressBar progressbar;
+    @FXML
+    private Button progressbtn;
+
+
+
+    @FXML
+    void learn() {
+
+        int size = 9;
+
+        HashMap<Integer, Coup> mapTrain = new HashMap<Integer, Coup>();
+
+        int h = 128;
+
+        double lr = 0.1;
+
+        int l = 2;
+
+        boolean verbose = true;
+
+        double epochs = 1000;
+
         //part 1
         if ( verbose ) {
             System.out.println();
@@ -34,7 +62,7 @@ public class Learn {
         }
         layers[layers.length-1] = size ;
         //
-        double error = 0.0 ;
+
         MultiLayerPerceptron net = new MultiLayerPerceptron(layers, lr, new SigmoidalTransferFunction());
 
         //part 2
@@ -42,6 +70,7 @@ public class Learn {
 
             @Override
             protected Double call() throws Exception {
+                double error = 0.0 ;
                 for(int i = 0; i < epochs; i++){
 
                     Coup c = null ;
@@ -50,12 +79,16 @@ public class Learn {
 
                     error += net.backPropagate(c.in, c.out);
 
-                    if ( i % 10 == 0 && verbose) System.out.println("Error at step "+i+" is "+ (error/(double)i));
+                    if ( i % 10 == 0 && verbose) updateMessage("Error at step "+i+" is "+ (error/(double)i));
+                    updateProgress(i, epochs);
                 }
-                if ( verbose )
-                    System.out.println("Learning completed!");
 
-                return net ;
-                return null;
+                return error ;
+            }
+        };
+        progressbar.setProgress(task.getProgress());
+
+        progresstext.textProperty().bind(task.messageProperty());
+        new Thread(task).start();
     }
 }
