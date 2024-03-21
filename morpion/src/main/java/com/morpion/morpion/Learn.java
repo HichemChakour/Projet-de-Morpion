@@ -34,18 +34,10 @@ public class Learn {
 
 
     @FXML
-    void learn() {
+    void learn(int l, int h, double lr) {
         int size = 9;
 
         HashMap<Integer, Coup> mapTrain = Test.loadCoupsFromFile("./morpion/src/main/resources/com/morpion/morpion/train.txt");
-
-        int h = 512;
-
-        double lr = 0.01;
-
-        int l = 1;
-
-        boolean verbose = true;
 
         double epochs = 100000;
 
