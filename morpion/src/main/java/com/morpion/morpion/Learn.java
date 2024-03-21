@@ -98,6 +98,7 @@ public class Learn {
                     //Thread.sleep(1);
                 }
                 System.out.println(c);
+                net.save("./morpion/src/main/resources/com/morpion/morpion/model/model_"+l+"_"+h+"_"+lr+".srl");
                 return error;
             }
         };
