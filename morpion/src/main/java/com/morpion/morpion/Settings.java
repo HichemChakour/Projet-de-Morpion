@@ -56,7 +56,7 @@ public class Settings {
         D3.setText(tab[3]);
     }
     //Fonction qui permet de sauvegarder les valeurs des champs de texte dans le fichier config.txt et fermer la fenêtre
-    @FXML
+    /*@FXML
     private void sauvegarder(ActionEvent event) throws IOException {
         String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
         String contenu = "F:" + F1.getText() + ":" + F2.getText() + ":" + F3.getText() + "\n" +
@@ -66,6 +66,21 @@ public class Settings {
         Node source = (Node) event.getSource();
         Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
+    }*/
+    //Fonction qui permet de sauvegarder les valeurs des champs de texte dans le fichier config.txt si il s'agit de caractères numériques et fermer la fenêtre
+    @FXML
+    private void sauvegarder(ActionEvent event) throws IOException {
+        String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
+        if (F1.getText().matches("[0-9]+") && F2.getText().matches("[0-9]+") && F3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$") &&
+                M1.getText().matches("[0-9]+") && M2.getText().matches("[0-9]+") && M3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$") &&
+                D1.getText().matches("[0-9]+") && D2.getText().matches("[0-9]+") && D3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$")) {
+            String contenu = "F:" + F1.getText() + ":" + F2.getText() + ":" + F3.getText() + "\n" +
+                    "M:" + M1.getText() + ":" + M2.getText() + ":" + M3.getText() + "\n" +
+                    "D:" + D1.getText() + ":" + D2.getText() + ":" + D3.getText();
+            Files.write(Paths.get(cheminDuFichier), contenu.getBytes());
+            Node source = (Node) event.getSource();
+            Stage stage = (Stage) source.getScene().getWindow();
+            stage.close();
+        }
     }
-
 }
