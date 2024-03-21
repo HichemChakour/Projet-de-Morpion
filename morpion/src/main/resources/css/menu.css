@@ -1,0 +1,36 @@
+.btnJeu {
+    -fx-background-color: #faf13c;
+    -fx-background-radius: 5;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-border-insets: -2;
+    -fx-border-width: 2;
+}
+
+.btnJeu:hover {
+    -fx-background-color: #f0e02b;
+}
+
+.btnDifficulte {
+    -fx-background-color: #feeaa1;
+    -fx-background-radius: 50;
+    -fx-border-color: #000000;
+    -fx-border-radius: 50;
+    -fx-background-insets: 1;
+    -fx-border-width: 2;
+}
+
+.btnDifficulte:hover {
+    -fx-background-color: #e8d176;
+}
+
+.name {
+    -fx-background-color: #d6955b;
+    -fx-background-radius: 5;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-border-insets: -1;
+    -fx-border-width: 2;
+    -fx-text-alignment: center;
+}
+

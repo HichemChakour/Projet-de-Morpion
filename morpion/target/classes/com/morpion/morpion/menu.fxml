@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="882.0" style="-fx-background-color: #226d68;" stylesheets="@../../../css/menu.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Menu">
+   <children>
+      <Button fx:id="btnHumain" layoutX="112.0" layoutY="68.0" mnemonicParsing="false" onAction="#Humain" prefHeight="364.0" prefWidth="284.0" styleClass="btnJeu" />
+      <Button fx:id="btnIA" layoutX="488.0" layoutY="68.0" mnemonicParsing="false" onAction="#IA" prefHeight="364.0" prefWidth="284.0" styleClass="btnJeu" />
+      <Button fx:id="facile" layoutX="487.0" layoutY="458.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="284.0" styleClass="btnDifficulte" text="Facile" />
+      <Button fx:id="moyen" layoutX="488.0" layoutY="493.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="284.0" styleClass="btnDifficulte" text="Moyen" />
+      <Button fx:id="difficile" layoutX="488.0" layoutY="527.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="284.0" styleClass="btnDifficulte" text="Difficile" />
+      <Label layoutX="488.0" layoutY="403.0" onMouseClicked="#IA" prefHeight="29.0" prefWidth="284.0"  styleClass="name"  text="J1 VS BOT" textAlignment="CENTER">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <Label layoutX="112.0" layoutY="403.0" onMouseClicked="#Humain" prefHeight="29.0" prefWidth="284.0" styleClass="name" text="J1 VS J2" textAlignment="CENTER">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
