@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="882.0" style="-fx-background-color: #226d68;" stylesheets="@../../../css/Jeu.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.JeuHumain">
+   <children>
+      <Button fx:id="case1" layoutX="241.0" layoutY="72.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case3" layoutX="521.0" layoutY="72.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case2" layoutX="381.0" layoutY="72.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case4" layoutX="241.0" layoutY="212.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case6" layoutX="521.0" layoutY="212.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case5" layoutX="381.0" layoutY="212.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case7" layoutX="241.0" layoutY="352.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case9" layoutX="521.0" layoutY="352.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case8" layoutX="381.0" layoutY="352.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Label layoutY="235.0" prefHeight="130.0" prefWidth="130.0" styleClass="icon" />
+      <Label layoutX="752.0" layoutY="217.0" prefHeight="130.0" prefWidth="130.0" styleClass="icon" />
+   </children>
+</Pane>

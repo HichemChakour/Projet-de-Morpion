@@ -10,9 +10,11 @@ import java.util.Arrays;
 public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("learn.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
         stage.setTitle("Hello!");
+        Controller controller = fxmlLoader.getController();
+        controller.changerContenu("menu.fxml");
         stage.setScene(scene);
         stage.show();
     }

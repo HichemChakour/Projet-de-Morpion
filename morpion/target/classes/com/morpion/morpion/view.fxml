@@ -3,20 +3,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Controller">
+<BorderPane fx:id="rootLayout" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #226d68;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Controller">
     <top>
-      <MenuBar prefHeight="25.0" prefWidth="Infinity">
-        <menus>
-          <Menu mnemonicParsing="false" text="IA">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#SettingIA" text="Setting" />
-                  <MenuItem mnemonicParsing="false" onAction="#ModelsIA" text="Models" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+        <VBox prefHeight="69.0" prefWidth="882.0">
+              <MenuBar prefHeight="14.0" prefWidth="882.0">
+                <menus>
+                  <Menu mnemonicParsing="false" text="IA">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#SettingIA" text="Setting" />
+                          <MenuItem mnemonicParsing="false" onAction="#ModelsIA" text="Models" />
+                    </items>
+                  </Menu>
+                </menus>
+              </MenuBar>
+            <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#menu" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #226d68;" />
+        </VBox>
    </top>
    <center>
-       <Pane fx:id="CenterPane" />
+
+           <fx:include fx:id="CenterPane" source="menu.fxml" />
+
    </center>
 </BorderPane>
