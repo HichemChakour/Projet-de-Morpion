@@ -2,19 +2,40 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="882.0" style="-fx-background-color: #226d68;" stylesheets="@../../../css/Jeu.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.JeuHumain">
    <children>
-      <Button fx:id="case1" layoutX="241.0" layoutY="72.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case3" layoutX="521.0" layoutY="72.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case2" layoutX="381.0" layoutY="72.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case4" layoutX="241.0" layoutY="212.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case6" layoutX="521.0" layoutY="212.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case5" layoutX="381.0" layoutY="212.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case7" layoutX="241.0" layoutY="352.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case9" layoutX="521.0" layoutY="352.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Button fx:id="case8" layoutX="381.0" layoutY="352.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
-      <Label layoutY="235.0" prefHeight="130.0" prefWidth="130.0" styleClass="icon" />
-      <Label layoutX="752.0" layoutY="217.0" prefHeight="130.0" prefWidth="130.0" styleClass="icon" />
+      <Button fx:id="case1" layoutX="241.0" layoutY="72.0" mnemonicParsing="false" onAction="#case1" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case3" layoutX="521.0" layoutY="72.0" mnemonicParsing="false" onAction="#case3" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case2" layoutX="381.0" layoutY="72.0" mnemonicParsing="false" onAction="#case2" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case4" layoutX="241.0" layoutY="212.0" mnemonicParsing="false" onAction="#case4" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case6" layoutX="521.0" layoutY="212.0" mnemonicParsing="false" onAction="#case6" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case5" layoutX="381.0" layoutY="212.0" mnemonicParsing="false" onAction="#case5" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case7" layoutX="241.0" layoutY="352.0" mnemonicParsing="false" onAction="#case7" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case9" layoutX="521.0" layoutY="352.0" mnemonicParsing="false" onAction="#case9" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Button fx:id="case8" layoutX="381.0" layoutY="352.0" mnemonicParsing="false" onAction="#case8" prefHeight="140.0" prefWidth="140.0" styleClass="case" />
+      <Label fx:id="J1" layoutY="217.0" prefHeight="130.0" prefWidth="130.0" styleClass="icon" />
+      <Label fx:id="J2" layoutX="752.0" layoutY="217.0" prefHeight="130.0" prefWidth="130.0" styleClass="icongris" />
+      <Button layoutX="361.0" layoutY="546.0" mnemonicParsing="false" onAction="#rejouer" prefHeight="81.0" prefWidth="180.0" styleClass="Rejouer" text="REJOUER">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Line fx:id="I1" endX="343.0" endY="364.0" layoutX="318.0" layoutY="126.0" startX="-77.0" startY="-54.0" styleClass="trait" visible="false" />
+      <Line fx:id="I2" endX="350.0" endY="-314.0" layoutX="311.0" layoutY="386.0" startX="-70.0" startY="106.0" styleClass="trait" visible="false" />
+      <Line fx:id="H2" endX="-1.0" endY="350.0" layoutX="452.0" layoutY="142.0" startX="-1.0" startY="-70.70709228515625" styleClass="trait" visible="false" />
+      <Line fx:id="V2" endX="199.0" layoutX="462.0" layoutY="282.0" startX="-221.0" styleClass="trait" visible="false" />
+      <Line fx:id="V1" endX="210.0" layoutX="451.0" layoutY="142.0" startX="-210.0" styleClass="trait" visible="false" />
+      <Line fx:id="V3" endX="210.0" layoutX="451.0" layoutY="422.0" startX="-210.0" styleClass="trait" visible="false" />
+      <Line fx:id="H1" endY="69.0" layoutX="311.0" layoutY="423.0" startY="-351.0" styleClass="trait" visible="false" />
+      <Line fx:id="H3" endX="-6.0" endY="313.0" layoutX="597.0" layoutY="179.0" startX="-6.0" startY="-106.0" styleClass="trait" visible="false" />
+      <Label fx:id="VictoireTxt" layoutX="282.0" layoutY="-32.0" opacity="0.0" prefHeight="81.0" prefWidth="338.0" styleClass="Victoiretxt" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Joueur1" layoutX="-9.0" layoutY="363.0" styleClass="name" text="Joueur1" />
+      <TextField fx:id="Joueur2" layoutX="743.0" layoutY="363.0" styleClass="name" text="Joueur2" />
    </children>
 </Pane>

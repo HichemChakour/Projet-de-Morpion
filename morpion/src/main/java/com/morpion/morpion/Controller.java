@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -57,16 +58,32 @@ public class Controller implements ContenuChanger {
 
         String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
 
+        Stage owner = (Stage) rootLayout.getScene().getWindow();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1,346, 281));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(owner);
+        stage.setScene(new Scene(root1,280, 230));
         stage.setTitle("Settings");
         stage.show();
 
     }
 
     @FXML
-    private void ModelsIA() {
-        System.out.println("ModelIA");
+    private void ModelsIA() throws IOException {
+        FXMLLoader fxmlSettings = new FXMLLoader(Application.class.getResource("Model.fxml"));
+
+        //CenterPane.getChildren().setAll((Pane) fxmlSettings.load());
+        Parent root1 = (Parent) fxmlSettings.load();
+
+
+        Stage owner = (Stage) rootLayout.getScene().getWindow();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(owner);
+        stage.setScene(new Scene(root1,425, 320));
+        stage.setTitle("Models");
+        stage.show();
+
     }
 
 

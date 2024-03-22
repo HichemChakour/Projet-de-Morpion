@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -12,10 +13,15 @@ public class Application extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
-        stage.setTitle("Hello!");
+        stage.setTitle("Morpion");
         Controller controller = fxmlLoader.getController();
         controller.changerContenu("menu.fxml");
         stage.setScene(scene);
+        //mettre de la musique
+       /* String musicFile = "morpion/src/main/resources/music.mp3";
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();*/
         stage.show();
     }
 
