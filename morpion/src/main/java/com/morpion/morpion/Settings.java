@@ -121,6 +121,7 @@ public class Settings {
             if (!D3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$")) {
                 D3.setStyle("-fx-border-color: red;");
             }
+
         }
     }
 }
