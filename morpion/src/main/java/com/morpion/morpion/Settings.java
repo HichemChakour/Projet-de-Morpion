@@ -70,10 +70,21 @@ public class Settings {
     //Fonction qui permet de sauvegarder les valeurs des champs de texte dans le fichier config.txt si il s'agit de caractères numériques et fermer la fenêtre
     @FXML
     private void sauvegarder(ActionEvent event) throws IOException {
+
+        F1.setStyle("-fx-border-color: none;");
+        F2.setStyle("-fx-border-color: none;");
+        F3.setStyle("-fx-border-color: none;");
+        M1.setStyle("-fx-border-color: none;");
+        M2.setStyle("-fx-border-color: none;");
+        M3.setStyle("-fx-border-color: none;");
+        D1.setStyle("-fx-border-color: none;");
+        D2.setStyle("-fx-border-color: none;");
+        D3.setStyle("-fx-border-color: none;");
+
         String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
-        if (F1.getText().matches("[0-9]+") && F2.getText().matches("[0-9]+") && F3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$") &&
-                M1.getText().matches("[0-9]+") && M2.getText().matches("[0-9]+") && M3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$") &&
-                D1.getText().matches("[0-9]+") && D2.getText().matches("[0-9]+") && D3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$")) {
+        if (F1.getText().matches("[1-9]\\d*") && F2.getText().matches("[1-9]\\d*") && F3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$") &&
+                M1.getText().matches("[1-9]\\d*") && M2.getText().matches("[1-9]\\d*") && M3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$") &&
+                D1.getText().matches("[1-9]\\d*") && D2.getText().matches("[1-9]\\d*") && D3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$")) {
             String contenu = "F:" + F1.getText() + ":" + F2.getText() + ":" + F3.getText() + "\n" +
                     "M:" + M1.getText() + ":" + M2.getText() + ":" + M3.getText() + "\n" +
                     "D:" + D1.getText() + ":" + D2.getText() + ":" + D3.getText();
@@ -81,6 +92,35 @@ public class Settings {
             Node source = (Node) event.getSource();
             Stage stage = (Stage) source.getScene().getWindow();
             stage.close();
+        }
+        else {
+            if (!F1.getText().matches("[1-9]\\d*")) {
+                F1.setStyle("-fx-border-color: red;");
+            }
+            if (!F2.getText().matches("[1-9]\\d*")) {
+                F2.setStyle("-fx-border-color: red;");
+            }
+            if (!F3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$")) {
+                F3.setStyle("-fx-border-color: red;");
+            }
+            if (!M1.getText().matches("[1-9]\\d*")) {
+                M1.setStyle("-fx-border-color: red;");
+            }
+            if (!M2.getText().matches("[1-9]\\d*")) {
+                M2.setStyle("-fx-border-color: red;");
+            }
+            if (!M3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$")) {
+                M3.setStyle("-fx-border-color: red;");
+            }
+            if (!D1.getText().matches("[1-9]\\d*")) {
+                D1.setStyle("-fx-border-color: red;");
+            }
+            if (!D2.getText().matches("[1-9]\\d*")) {
+                D2.setStyle("-fx-border-color: red;");
+            }
+            if (!D3.getText().matches("^0*(?:1|0(?:\\.\\d+)?|\\.\\d+)$")) {
+                D3.setStyle("-fx-border-color: red;");
+            }
         }
     }
 }

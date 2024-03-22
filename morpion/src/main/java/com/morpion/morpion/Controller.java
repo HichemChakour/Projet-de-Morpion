@@ -58,7 +58,7 @@ public class Controller implements ContenuChanger {
         String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
 
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1,280, 230));
+        stage.setScene(new Scene(root1,346, 281));
         stage.setTitle("Settings");
         stage.show();
 
