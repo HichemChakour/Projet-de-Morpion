@@ -6,87 +6,87 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="346.0" stylesheets="@../../../css/Settings.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Settings">
-   <children>
-      <VBox layoutX="11.0" layoutY="19.0" prefHeight="156.0" prefWidth="324.0">
-         <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="240.0">
-               <children>
-                  <Label prefHeight="53.0" prefWidth="55.0" text="Nombre de couches" textAlignment="CENTER" wrapText="true">
-                     <HBox.margin>
-                        <Insets left="70.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="11.0" />
-                     </font></Label>
-                  <Label prefHeight="51.0" prefWidth="48.0" text="Taille des couches" textAlignment="CENTER" wrapText="true">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="11.0" />
-                     </font></Label>
-                  <Label prefHeight="53.0" prefWidth="84.0" text="Taux d'apprentissage" textAlignment="CENTER" wrapText="true">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="11.0" />
-                     </font></Label>
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="76.0" prefWidth="308.0">
-               <children>
-                  <Label prefHeight="17.0" prefWidth="46.0" text="Facile">
-                     <HBox.margin>
-                        <Insets right="15.0" />
-                     </HBox.margin></Label>
-                  <TextField fx:id="F1" prefHeight="25.0" prefWidth="40.0" />
-                   <TextField fx:id="F2" prefHeight="25.0" prefWidth="60.0">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin></TextField>
-                   <TextField fx:id="F3" prefHeight="25.0" prefWidth="60.0">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin></TextField>
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="240.0">
-               <children>
-                  <Label prefHeight="17.0" prefWidth="46.0" text="Medium">
-                     <HBox.margin>
-                        <Insets right="15.0" />
-                     </HBox.margin></Label>
-                   <TextField fx:id="M1" prefHeight="25.0" prefWidth="40.0" />
-                   <TextField fx:id="M2" prefHeight="25.0" prefWidth="60.0">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin></TextField>
-                   <TextField fx:id="M3" prefHeight="25.0" prefWidth="60.0">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin></TextField>
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="191.0">
-               <children>
-                  <Label prefHeight="17.0" prefWidth="46.0" text="Difficile">
-                     <HBox.margin>
-                        <Insets right="15.0" />
-                     </HBox.margin></Label>
-                   <TextField fx:id="D1" prefHeight="25.0" prefWidth="40.0" />
-                   <TextField fx:id="D2" prefHeight="25.0" prefWidth="60.0">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin></TextField>
-                   <TextField fx:id="D3" prefHeight="25.0" prefWidth="60.0">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin></TextField>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-      <Button layoutX="254.0" layoutY="195.0" mnemonicParsing="false" onAction="#sauvegarder" prefHeight="25.0" prefWidth="60.0" text="Save" />
-   </children>
+    <children>
+        <VBox layoutX="11.0" layoutY="19.0" prefHeight="156.0" prefWidth="324.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="240.0">
+                    <children>
+                        <Label prefHeight="53.0" prefWidth="55.0" text="Nombre de couches" textAlignment="CENTER" wrapText="true">
+                            <HBox.margin>
+                                <Insets left="70.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="11.0" />
+                            </font></Label>
+                        <Label prefHeight="51.0" prefWidth="48.0" text="Taille des couches" textAlignment="CENTER" wrapText="true">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="11.0" />
+                            </font></Label>
+                        <Label prefHeight="53.0" prefWidth="84.0" text="Taux d'apprentissage" textAlignment="CENTER" wrapText="true">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="11.0" />
+                            </font></Label>
+                    </children>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="76.0" prefWidth="308.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="46.0" text="Facile">
+                            <HBox.margin>
+                                <Insets right="15.0" />
+                            </HBox.margin></Label>
+                        <TextField fx:id="F1" prefHeight="25.0" prefWidth="40.0" />
+                        <TextField fx:id="F2" prefHeight="25.0" prefWidth="60.0">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin></TextField>
+                        <TextField fx:id="F3" prefHeight="25.0" prefWidth="60.0">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="240.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="46.0" text="Medium">
+                            <HBox.margin>
+                                <Insets right="15.0" />
+                            </HBox.margin></Label>
+                        <TextField fx:id="M1" prefHeight="25.0" prefWidth="40.0" />
+                        <TextField fx:id="M2" prefHeight="25.0" prefWidth="60.0">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin></TextField>
+                        <TextField fx:id="M3" prefHeight="25.0" prefWidth="60.0">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="191.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="46.0" text="Difficile">
+                            <HBox.margin>
+                                <Insets right="15.0" />
+                            </HBox.margin></Label>
+                        <TextField fx:id="D1" prefHeight="25.0" prefWidth="40.0" />
+                        <TextField fx:id="D2" prefHeight="25.0" prefWidth="60.0">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin></TextField>
+                        <TextField fx:id="D3" prefHeight="25.0" prefWidth="60.0">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button layoutX="254.0" layoutY="195.0" mnemonicParsing="false" onAction="#sauvegarder" prefHeight="25.0" prefWidth="60.0" text="Save" />
+    </children>
 </AnchorPane>
