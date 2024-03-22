@@ -3,10 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Learn">
+<AnchorPane prefHeight="317.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Learn">
    <children>
-      <ProgressBar fx:id="progressbar" layoutX="195.0" layoutY="174.0" prefWidth="200.0" progress="0.0" />
-      <Button fx:id="progressbtn" layoutX="273.0" layoutY="269.0" mnemonicParsing="false" onAction="#learn" text="learn" />
-      <Label fx:id="progresstext" layoutX="174.0" layoutY="117.0" prefHeight="17.0" prefWidth="320.0" />
+      <ProgressBar fx:id="progressbar" layoutX="80.0" layoutY="155.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="progresstext" layoutX="42.0" layoutY="84.0" prefHeight="17.0" prefWidth="320.0" />
    </children>
 </AnchorPane>

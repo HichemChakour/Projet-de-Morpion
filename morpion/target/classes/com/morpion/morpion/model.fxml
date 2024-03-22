@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="320.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.morpion.morpion.Model">
+   <children>
+      <ListView fx:id="list" layoutX="25.0" layoutY="56.0" prefHeight="170.0" prefWidth="297.0" />
+      <Button layoutX="304.0" layoutY="263.0" mnemonicParsing="false" onAction="#delete" prefHeight="33.0" prefWidth="78.0" text="Supprimer" />
+   </children>
+</AnchorPane>

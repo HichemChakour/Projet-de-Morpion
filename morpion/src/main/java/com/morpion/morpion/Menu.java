@@ -4,12 +4,29 @@ import javafx.animation.FadeTransition;
 import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import javafx.scene.Cursor;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static com.morpion.morpion.ai.MultiLayerPerceptron.load;
+
 
 public class Menu {
     @FXML
@@ -22,6 +39,9 @@ public class Menu {
     Button moyen;
     @FXML
     Button difficile;
+
+
+    static String difficulte;
 
     private ContenuChanger contenuChanger;
 
@@ -52,8 +72,6 @@ public class Menu {
     }
 
 
-
-
     @FXML
     private void Humain() {
         contenuChanger.changerContenu("JeuHumain.fxml");
@@ -73,9 +91,9 @@ public class Menu {
         fadeTransitionButton2.setFromValue(0);
         fadeTransitionButton2.setToValue(1);
 
-        PauseTransition pauseTransition = new PauseTransition(Duration.seconds(0.5));
-        PauseTransition pauseTransition2 = new PauseTransition(Duration.seconds(0.7));
-        PauseTransition pauseTransition3 = new PauseTransition(Duration.seconds(0.9));
+        PauseTransition pauseTransition = new PauseTransition(Duration.seconds(0.1));
+        PauseTransition pauseTransition2 = new PauseTransition(Duration.seconds(0.3));
+        PauseTransition pauseTransition3 = new PauseTransition(Duration.seconds(0.5));
 
         pauseTransition.setOnFinished(event -> {
             fadeTransition.play();
@@ -128,6 +146,143 @@ public class Menu {
             vibration3.play();
         });
 
+
     }
 
+
+
+
+
+    @FXML
+    private void facile() throws IOException {
+        boolean exite = false;
+        String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
+        List<String> list = Files.lines(Paths.get(cheminDuFichier)).collect(Collectors.toList());
+        String[] tab;
+        tab = list.get(0).split(":");
+        Path DossierModel = Paths.get("./morpion/src/main/resources/model");
+
+        File dossier = DossierModel.toFile();
+        File[] listeDesFichiers = dossier.listFiles();
+
+        if (listeDesFichiers != null) {
+            for (File fichier : listeDesFichiers) {
+                if (fichier.isFile()) {
+                    if (fichier.getName().equals("model_" + tab[1] + "_" + tab[2] + "_" + tab[3] + ".srl")) {
+                        exite = true;
+
+
+                    }
+
+                }
+            }
+        }
+        if (!exite) {
+            difficulte = "facile";
+            FXMLLoader fxmlSettings = new FXMLLoader(Application.class.getResource("learn.fxml"));
+
+            //CenterPane.getChildren().setAll((Pane) fxmlSettings.load());
+            Parent root1 = (Parent) fxmlSettings.load();
+
+
+            Stage owner = (Stage) btnHumain.getScene().getWindow();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(owner);
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(new Scene(root1, 380, 300));
+            stage.setTitle("learning...");
+            stage.show();
+
+        }
+        load("./morpion/src/main/resources/model/"+ "model_" + tab[1] + "_" + tab[2] + "_" + tab[3] + ".srl");
+
+    }
+
+    @FXML
+    private void moyen() throws IOException {
+        boolean exite = false;
+        String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
+        List<String> list = Files.lines(Paths.get(cheminDuFichier)).collect(Collectors.toList());
+        String[] tab;
+        tab = list.get(1).split(":");
+        Path DossierModel = Paths.get("./morpion/src/main/resources/model");
+
+        File dossier = DossierModel.toFile();
+        File[] listeDesFichiers = dossier.listFiles();
+
+        if (listeDesFichiers != null) {
+            for (File fichier : listeDesFichiers) {
+                if (fichier.isFile()) {
+                    if (fichier.getName().equals("model_" + tab[1] + "_" + tab[2] + "_" + tab[3] + ".srl")) {
+                        exite = true;
+                    }
+
+                }
+            }
+        }
+        if (!exite) {
+            difficulte = "moyen";
+            FXMLLoader fxmlSettings = new FXMLLoader(Application.class.getResource("learn.fxml"));
+
+            //CenterPane.getChildren().setAll((Pane) fxmlSettings.load());
+            Parent root1 = (Parent) fxmlSettings.load();
+
+
+            Stage owner = (Stage) btnHumain.getScene().getWindow();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(owner);
+            stage.setScene(new Scene(root1, 380, 300));
+            stage.setTitle("learning...");
+            stage.show();
+
+        }
+        load("./morpion/src/main/resources/model/"+ "model_" + tab[1] + "_" + tab[2] + "_" + tab[3] + ".srl");
+
+    }
+
+    @FXML
+    private void difficile() throws IOException {
+        boolean exite = false;
+        String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
+        List<String> list = Files.lines(Paths.get(cheminDuFichier)).collect(Collectors.toList());
+        String[] tab;
+        tab = list.get(2).split(":");
+        Path DossierModel = Paths.get("./morpion/src/main/resources/model");
+
+        File dossier = DossierModel.toFile();
+        File[] listeDesFichiers = dossier.listFiles();
+
+        if (listeDesFichiers != null) {
+            for (File fichier : listeDesFichiers) {
+                if (fichier.isFile()) {
+                    if (fichier.getName().equals("model_" + tab[1] + "_" + tab[2] + "_" + tab[3] + ".srl")) {
+                        exite = true;
+
+                    }
+
+                }
+            }
+        }
+        if (!exite) {
+            difficulte = "difficile";
+            FXMLLoader fxmlSettings = new FXMLLoader(Application.class.getResource("learn.fxml"));
+
+            //CenterPane.getChildren().setAll((Pane) fxmlSettings.load());
+            Parent root1 = (Parent) fxmlSettings.load();
+
+
+            Stage owner = (Stage) btnHumain.getScene().getWindow();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(owner);
+            stage.setScene(new Scene(root1, 380, 300));
+            stage.setTitle("learning...");
+            stage.show();
+
+        }
+        load("./morpion/src/main/resources/model/"+ "model_" + tab[1] + "_" + tab[2] + "_" + tab[3] + ".srl");
+
+    }
 }

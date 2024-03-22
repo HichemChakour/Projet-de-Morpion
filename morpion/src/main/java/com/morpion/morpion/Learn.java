@@ -2,7 +2,11 @@
 package com.morpion.morpion;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import com.morpion.morpion.ai.Coup;
 import com.morpion.morpion.ai.MultiLayerPerceptron;
@@ -32,6 +36,28 @@ public class Learn {
     private Button progressbtn;
 
 
+    public void initialize() throws IOException {
+        String cheminDuFichier = "./morpion/src/main/resources/com/morpion/morpion/config.txt";
+        List<String> list = Files.lines(Paths.get(cheminDuFichier)).collect(Collectors.toList());
+        String[] tab;
+        String[] tab2;
+        String[] tab3;
+        tab = list.get(0).split(":");
+        tab2 = list.get(1).split(":");
+        tab3 = list.get(2).split(":");
+        switch (Menu.difficulte){
+            case "facile":
+                learn(Integer.parseInt(tab[1]), Integer.parseInt(tab[2]), Double.parseDouble(tab[3]));
+                break;
+            case "moyen":
+                learn(Integer.parseInt(tab2[1]), Integer.parseInt(tab2[2]), Double.parseDouble(tab2[3]));
+                break;
+            case "difficile":
+                learn(Integer.parseInt(tab3[1]), Integer.parseInt(tab3[2]), Double.parseDouble(tab3[3]));
+                break;
+        }
+
+    }
 
     @FXML
     void learn(int l, int h, double lr) {
@@ -90,7 +116,13 @@ public class Learn {
                     //Thread.sleep(1);
                 }
                 System.out.println(c);
-                net.save("./morpion/src/main/resources/com/morpion/morpion/model/model_"+l+"_"+h+"_"+lr+".srl");
+                //fermer le stage actuel
+
+
+
+                net.save("./morpion/src/main/resources/model/model_"+l+"_"+h+"_"+lr+".srl");
+
+
                 return error;
             }
         };
@@ -102,5 +134,16 @@ public class Learn {
         });*/
 
         new Thread(task).start();
+
+        //fermer le stage a la fin de la tache
+        progressbar.progressProperty().addListener((obs, oldProgress, newProgress) -> {
+            if (newProgress.doubleValue() >=0.99999) {
+                Stage stage = (Stage) progressbar.getScene().getWindow();
+                stage.close();
+            }
+        });
+
+
+
     }
 }

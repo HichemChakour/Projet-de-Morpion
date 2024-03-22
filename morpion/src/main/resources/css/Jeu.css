@@ -8,6 +8,15 @@
 
 }
 
+.icongris{
+    -fx-background-color: #8d8787;
+    -fx-background-radius: 15px;
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+    -fx-border-insets: -2;
+    -fx-border-width: 2;
+}
+
 .case{
     -fx-background-color: #d6955b;
     -fx-border-color: black;
@@ -18,3 +27,41 @@
 .case:hover{
     -fx-background-color: #d78d3f;
 }
+
+.trait{
+    -fx-stroke: red;
+    -fx-stroke-width: 5;
+}
+
+.Victoiretxt{
+    -fx-background-color: #ad9b8b;
+    -fx-background-radius: 15px;
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+    -fx-border-insets: -2;
+    -fx-border-width: 2;
+
+}
+
+.Rejouer{
+    -fx-background-color: #ad9b8b;
+    -fx-background-radius: 15px;
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+    -fx-border-insets: -2;
+    -fx-border-width: 2;
+}
+
+.Rejouer:hover{
+    -fx-background-color: #d6955b;
+}
+
+.name{
+    -fx-background-color: #d6955b;
+    -fx-background-radius: 15px;
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+    -fx-border-insets: -2;
+    -fx-border-width: 2;
+}
+

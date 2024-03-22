@@ -12,12 +12,14 @@
 }
 
 .btnDifficulte {
-    -fx-background-color: #feeaa1;
-    -fx-background-radius: 50;
+    -fx-background-color: #e3c779;
+    -fx-background-radius: 8;
     -fx-border-color: #000000;
-    -fx-border-radius: 50;
+    -fx-border-radius: 8;
     -fx-background-insets: 1;
     -fx-border-width: 2;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
 }
 
 .btnDifficulte:hover {
@@ -31,6 +33,13 @@
     -fx-border-radius: 5;
     -fx-border-insets: -1;
     -fx-border-width: 2;
-    -fx-text-alignment: center;
+
+    /* text gras*/
+    -fx-font-weight: bold;
+    /* taille du texte */
+    -fx-font-size: 25;
+    /* ccordoneéé texte */
+
+
 }
 
